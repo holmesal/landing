@@ -13,6 +13,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center top;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
