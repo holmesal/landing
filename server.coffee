@@ -6,4 +6,4 @@ require('http').createServer (req, res) ->
 	req.addListener 'end', ->
 		file.serve req, res
 	.resume()
-.listen 8080
+.listen 80
