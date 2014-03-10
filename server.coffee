@@ -8,4 +8,4 @@ require('http').createServer (req, res) ->
 	req.addListener 'end', ->
 		file.serve req, res
 	.resume()
-.listen process.env.PORT || 8080
+.listen process.env.PORT
