@@ -1,7 +1,10 @@
 {
   "name": "landing",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "node-static": "^0.7.3"
+  },
   "devDependencies": {
     "grunt": "^0.4.3",
     "grunt-autoprefixer": "~0.4.0",
