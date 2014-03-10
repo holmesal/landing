@@ -1,6 +1,6 @@
 stat = require 'node-static'
 
-process.env.PWD = process.cwd()
+#process.env.PWD = process.cwd()
 
 file = new stat.Server "./dist"
 
