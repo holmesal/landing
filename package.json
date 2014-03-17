@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "coffee-script": "^1.7.1",
-    "node-static": "^0.7.3"
+    "node-static": "^0.7.3",
+    "newrelic": "^1.4.0"
   },
   "devDependencies": {
     "grunt": "^0.4.3",
