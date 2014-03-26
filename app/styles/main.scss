@@ -18,19 +18,23 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 html{
     height: 100%;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 /* Space out content a bit */
 body {
     height: 100%;
     @include user-select(none);
+    // padding-bottom: 100px;
+}
+
+body,h1,h2{
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
 }
 
 h1,h2{
     line-height: 200%;
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
 }
 
 .contentShell{
@@ -43,7 +47,7 @@ h1,h2{
     width: 100%;
     text-align: center;
     position: relative;
-    
+    transition: 0.2s linear all;
     overflow: hidden;
 
     .container{ 
@@ -65,7 +69,9 @@ h1,h2{
 
     .mask{
         height: 100%;
-        opacity: 0.8;
+        &.faded{
+            opacity: 0.8;
+        }
     }
 
     .socialRow{
@@ -119,59 +125,19 @@ h1,h2{
     }
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
 /* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+    h1,h2{
+        line-height: 120%;
+    }
+    h1{
+        font-size: 23pt;
+    }
+
+    h2{
+        font-size: 20pt;
+    }
+}
 @media screen and (min-width: 768px) {
     .container {
         max-width: 730px;

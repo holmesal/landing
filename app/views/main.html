@@ -5,7 +5,7 @@
     <a href="http://medium.com/@alonsoholmes" target="_blank">medium</a>
   </div>
   <video id="bgVideo" ng-show="bgColor && showVideo" src="https://mtc.cdn.vine.co/r/videos/463E5B2C251058610843358486528_16e7ebd27e1.4.8.6227882152798916768.mp4?versionId=iarhuYl8vSO7oTGUTAUK95m2wJ1k0CKx" autoplay="true" loop="true" muted></video>
-  <div class="mask" ng-style="{'background-color':bgColor}"></div>
+  <div class="mask" ng-style="{'background-color':bgColor}" ng-class="{faded:showVideo}"></div>
   <div class="container">
     <h1>Hi, I'm Alonso Holmes <br> <span>&</span> <br>I build realtime webapps.</h1>
   </div>
