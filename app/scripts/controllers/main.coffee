@@ -29,7 +29,7 @@ angular.module('landingApp')
         # $scope.bgColor.$update()
 
         # Update the text
-        $scope.changeText = 'Nice! '
+        $scope.changeText = 'Nice! Try viewing this page on mutiple devices.'
 
     browserCheck = ->
         check = false;
