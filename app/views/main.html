@@ -1,38 +1,34 @@
-<img src="images/yeoman.png" alt="I'm Yeoman"><br>
-<!-- <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">landing</h3>
+
+<div class="pane colored" ng-click="changeColor()">
+  <div class="socialRow">
+    <a href="http://twitter.com/alonsoholmes" target="_blank">twitter</a>
+    <a href="http://medium.com/@alonsoholmes" target="_blank">medium</a>
+  </div>
+  <video id="bgVideo" ng-show="bgColor" src="https://mtc.cdn.vine.co/r/videos/463E5B2C251058610843358486528_16e7ebd27e1.4.8.6227882152798916768.mp4?versionId=iarhuYl8vSO7oTGUTAUK95m2wJ1k0CKx" autoplay="true" loop="true" muted></video>
+  <div class="mask" ng-style="{'background-color':bgColor}"></div>
+  <div class="container">
+    <h1>Hi, I'm Alonso Holmes <br> <span>&</span> <br>I build realtime webapps.</h1>
+  </div>
+  <p class="clickToChange">{{changeText}}</p>
+
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+<div class="pane">
+  <div class="container">
+    <h1>I use</h1>
+    <img class="awesomeThings" src="images/logos.png">
+    <h2>to build realtime interactions for clients at all levels.</h2>
+    <p>(I also sometimes build servers in node.js, integrate <a href="https://stripe.com/">stripe</a> for payments, and sprinkle <a href="https://mixpanel.com/">mixpanel</a> for analytics)<p>
+  </div>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="pane colored" ng-style="{'background-color':bgColor}" ng-click="changeColor()">
+  <div class="container">
+    <h1>I'm for hire.</h1>
+    <p>I deploy code in real-time, so you can see your project coming together as I build it.</p>
+    <p>I host everything on github, so you own your code from day one.</p>
+    <p>I build to standards that make it easy for other developers and designers to pick up where I leave off.</p>
+    <p>I keep you in the loop with a private chat room, linked to github.</p>
+    <a class="hireLink" href="mailto:hire@alonso.io">Let's build something</a>
+  </div>
 </div>
-
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
-</div>
- -->

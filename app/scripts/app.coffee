@@ -4,7 +4,8 @@ angular.module('landingApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider
