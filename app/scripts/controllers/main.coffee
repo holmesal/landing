@@ -40,7 +40,8 @@ angular.module('landingApp')
         return check
         
     # Check the browser
-    if browserCheck()
-        $scope.showVideo = false
-    else
-        $scope.showVideo = true
+    # if browserCheck()
+    #     $scope.showVideo = false
+    # else
+    #     $scope.showVideo = true
+    $scope.showVideo = false
