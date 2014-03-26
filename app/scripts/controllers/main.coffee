@@ -3,7 +3,7 @@
 angular.module('landingApp')
   .controller 'MainCtrl', ($scope, $firebase) ->
 
-    $scope.changeText = 'Hint: click to change the color of this site for everyone'
+    $scope.changeText = 'Hint: click to permanently change the color of this site'
 
     # Kinda silly that we can't set this directly as an attribute
     document.getElementById("bgVideo").playbackRate = 0.5;
@@ -29,7 +29,17 @@ angular.module('landingApp')
         # $scope.bgColor.$update()
 
         # Update the text
-        $scope.changeText = 'Nice! Try viewing this page on mutiple devices.'
+        $scope.changeText = 'Well done.'
+
+    $scope.mouseMove = (e) ->
+        x = e.clientX / e.view.innerWidth
+        y = e.clientY / e.view.innerHeight
+
+        scale = 100
+        $scope.offset = 
+            x: (x - 0.5) * scale
+            y: (y - 0.5) * scale
+        console.log "mouse moved to #{x} : #{y}"
 
     browserCheck = ->
         check = false;
@@ -40,8 +50,8 @@ angular.module('landingApp')
         return check
         
     # Check the browser
-    # if browserCheck()
-    #     $scope.showVideo = false
-    # else
-    #     $scope.showVideo = true
-    $scope.showVideo = false
+    if browserCheck()
+        $scope.showVideo = false
+    else
+        $scope.showVideo = true
+    # $scope.showVideo = false

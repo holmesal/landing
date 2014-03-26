@@ -1,5 +1,5 @@
 
-<div class="pane colored" ng-click="changeColor()">
+<div class="pane colored" ng-click="changeColor()" ng-mouseMove="mouseMove($event)">
   <div class="socialRow">
     <a href="http://twitter.com/alonsoholmes" target="_blank">twitter</a>
     <a href="http://medium.com/@alonsoholmes" target="_blank">medium</a>
@@ -7,28 +7,25 @@
   <video id="bgVideo" ng-show="bgColor && showVideo" src="https://mtc.cdn.vine.co/r/videos/463E5B2C251058610843358486528_16e7ebd27e1.4.8.6227882152798916768.mp4?versionId=iarhuYl8vSO7oTGUTAUK95m2wJ1k0CKx" autoplay="true" loop="true" muted></video>
   <div class="mask" ng-style="{'background-color':bgColor}" ng-class="{faded:showVideo}"></div>
   <div class="container">
-    <h1>Hi, I'm Alonso Holmes <br> <span>&</span> <br>I build realtime webapps.</h1>
+    <h1>I build realtime webapps</h1>
   </div>
-  <p class="clickToChange">{{changeText}}</p>
-
+  <img class="arrow" src="images/arrow.png" ng-style="{'margin-left':-offset.x,'bottom':100+offset.y}">
 </div>
 
 <div class="pane">
   <div class="container">
-    <h1>I use</h1>
+    <h1>by using components like</h1>
     <img class="awesomeThings" src="images/logos.png">
-    <h2>to build realtime interactions for clients at all levels.</h2>
-    <p>(I also sometimes build servers in node.js, integrate <a href="https://stripe.com/">stripe</a> for payments, and sprinkle <a href="https://mixpanel.com/">mixpanel</a> for analytics)<p>
+    <h2>and moving very, very quickly.</h2>
+    <p>(I also sometimes build backends in <a href="http://nodejs.org/" target="_blank">node</a>, integrate payments with <a href="https://stripe.com/" target="_blank">stripe</a>, measure user behavior with <a href="https://mixpanel.com/" target="_blank">mixpanel</a>, scaffold projects with <a href="https://github.com/yeoman/yeoman" target="_blank">yeoman</a>, deploy with <a href="https://www.heroku.com" target="_blank">heroku</a>/<a href="https://github.com/progrium/dokku" target="_blank">dokku</a>, and make pretty bombtastic <a href="http://xkcd.com/149/" target="_blank">sandwiches</a>)<p>
   </div>
 </div>
 
 <div class="pane colored" ng-style="{'background-color':bgColor}" ng-click="changeColor()">
   <div class="container">
     <h1>I'm for hire.</h1>
-    <p>I deploy code in real-time, so you can see your project coming together as I build it.</p>
-    <p>I use off-the-shelf services, so you know exactly how your costs will scale once you've launched.</p>
-    <p>I build to standards that make it easy for other developers and designers to pick up where I leave off.</p>
-    <p>I keep you in the loop with a private chat room, linked to github.</p>
+    <h3>And I'm always looking for interesting projects solving meaningful problems.</h3>
     <a class="hireLink" href="mailto:hire@alonso.io">Let's build something</a>
   </div>
+  <p class="clickToChange">{{changeText}}</p>
 </div>
