@@ -43,7 +43,6 @@ angular.module('landingApp')
         
     # Check the browser
     if browserCheck()
-        $scope.showVideo = false
+        $scope.isDesktop = false
     else
-        $scope.showVideo = true
-    # $scope.showVideo = false
+        $scope.isDesktop = true

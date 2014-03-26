@@ -4,12 +4,12 @@
     <a href="http://twitter.com/alonsoholmes" target="_blank">twitter</a>
     <a href="http://medium.com/@alonsoholmes" target="_blank">medium</a>
   </div>
-  <video id="bgVideo" ng-show="bgColor && showVideo" src="https://mtc.cdn.vine.co/r/videos/463E5B2C251058610843358486528_16e7ebd27e1.4.8.6227882152798916768.mp4?versionId=iarhuYl8vSO7oTGUTAUK95m2wJ1k0CKx" autoplay="true" loop="true" muted></video>
-  <div class="mask" ng-style="{'background-color':bgColor}" ng-class="{faded:showVideo}" ng-click="changeColor()"></div>
+  <video id="bgVideo" ng-show="bgColor && isDesktop" src="https://mtc.cdn.vine.co/r/videos/463E5B2C251058610843358486528_16e7ebd27e1.4.8.6227882152798916768.mp4?versionId=iarhuYl8vSO7oTGUTAUK95m2wJ1k0CKx" autoplay="true" loop="true" muted></video>
+  <div class="mask" ng-style="{'background-color':bgColor}" ng-class="{faded:isDesktop}" ng-click="changeColor()"></div>
   <div class="container">
     <h1>I build realtime webapps</h1>
   </div>
-  <a href="#things" du-smooth-scroll>
+  <a href="#things" du-smooth-scroll ng-hide="!isDesktop">
     <img class="arrow" src="images/arrowwhite.png">
   </a>
 </div>
@@ -21,7 +21,7 @@
     <h2>and moving very, very quickly.</h2>
     <p>(I also sometimes build backends in <a href="http://nodejs.org/" target="_blank">node</a>, integrate payments with <a href="https://stripe.com/" target="_blank">stripe</a>, measure user behavior with <a href="https://mixpanel.com/" target="_blank">mixpanel</a>, scaffold projects with <a href="https://github.com/yeoman/yeoman" target="_blank">yeoman</a>, deploy with <a href="https://www.heroku.com" target="_blank">heroku</a>/<a href="https://github.com/progrium/dokku" target="_blank">dokku</a>, and make pretty bombtastic <a href="http://xkcd.com/149/" target="_blank">sandwiches</a>)<p>
   </div>
-  <a href="#hire" du-smooth-scroll>
+  <a href="#hire" du-smooth-scroll ng-hide="!isDesktop">
     <img class="arrow" src="images/arrowblack.png">
   </a>
 </div>
