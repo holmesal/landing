@@ -5,6 +5,8 @@ angular.module('landingApp')
 
     $scope.changeText = 'Hint: click to permanently change the color of this site'
 
+    $scope.btnPos = 100
+
     # Kinda silly that we can't set this directly as an attribute
     document.getElementById("bgVideo").playbackRate = 0.5;
 
@@ -32,14 +34,27 @@ angular.module('landingApp')
         $scope.changeText = 'Well done.'
 
     $scope.mouseMove = (e) ->
-        x = e.clientX / e.view.innerWidth
-        y = e.clientY / e.view.innerHeight
+        # Unit vectors
+        x = e.clientX / e.view.innerWidth - 0.5
+        y = e.clientY / e.view.innerHeight - (e.view.innerHeight - $scope.btnPos)/e.view.innerHeight
 
-        scale = 100
+        # if x < 0.1 then x = 0.5 
+        # if x < 0.1 then x = -0.5 
+        # if y > 0.1 then y = 0.5 
+        # if y < 0.1 then y = -0.5 
+
+        scale = 15
         $scope.offset = 
-            x: (x - 0.5) * scale
-            y: (y - 0.5) * scale
-        console.log "mouse moved to #{x} : #{y}"
+            x: x * scale
+            y: y * scale
+
+        # if -10 < $scope.offset.x < 10 and -10 < $scope.offset.y < 10
+        #     $scope.scale = 
+        # console.log "mouse moved to #{x} : #{y}"
+
+    $scope.scrollToNext = ->
+        console.log "scrolling to next!"
+        $("body").animate({scrollTop: "1000"}, "slow");
 
     browserCheck = ->
         check = false;

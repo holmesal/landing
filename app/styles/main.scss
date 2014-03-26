@@ -93,7 +93,11 @@ h1,h2{
 
     .arrow{
         position: absolute;
-        bottom: 100px;
+        transition: 0.1s linear all;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
