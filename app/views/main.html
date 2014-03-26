@@ -1,5 +1,5 @@
 
-<div class="pane colored" ng-mouseMove="mouseMove($event)">
+<div class="pane colored">
   <div class="socialRow">
     <a href="http://twitter.com/alonsoholmes" target="_blank">twitter</a>
     <a href="http://medium.com/@alonsoholmes" target="_blank">medium</a>
@@ -9,19 +9,24 @@
   <div class="container">
     <h1>I build realtime webapps</h1>
   </div>
-  <img class="arrow" src="images/arrow.png" ng-style="{'margin-left':offset.x,'bottom':btnPos-offset.y}" ng-click="scrollToNext()">
+  <a href="#things" du-smooth-scroll>
+    <img class="arrow" src="images/arrowwhite.png">
+  </a>
 </div>
 
-<div class="pane">
+<div class="pane" id="things">
   <div class="container">
     <h1>by using components like</h1>
     <img class="awesomeThings" src="images/logos.png">
     <h2>and moving very, very quickly.</h2>
     <p>(I also sometimes build backends in <a href="http://nodejs.org/" target="_blank">node</a>, integrate payments with <a href="https://stripe.com/" target="_blank">stripe</a>, measure user behavior with <a href="https://mixpanel.com/" target="_blank">mixpanel</a>, scaffold projects with <a href="https://github.com/yeoman/yeoman" target="_blank">yeoman</a>, deploy with <a href="https://www.heroku.com" target="_blank">heroku</a>/<a href="https://github.com/progrium/dokku" target="_blank">dokku</a>, and make pretty bombtastic <a href="http://xkcd.com/149/" target="_blank">sandwiches</a>)<p>
   </div>
+  <a href="#hire" du-smooth-scroll>
+    <img class="arrow" src="images/arrowblack.png">
+  </a>
 </div>
 
-<div class="pane colored" ng-style="{'background-color':bgColor}" ng-click="changeColor()">
+<div class="pane colored" id="hire" ng-style="{'background-color':bgColor}" ng-click="changeColor()">
   <div class="container">
     <h1>I'm for hire.</h1>
     <h2>And I'm always looking for interesting projects solving meaningful problems.</h2>

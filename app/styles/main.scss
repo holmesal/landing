@@ -25,6 +25,7 @@ html{
 body {
     height: 100%;
     @include user-select(none);
+    // position: relative;
     // padding-bottom: 100px;
 }
 
@@ -39,7 +40,6 @@ h1,h2{
 
 .contentShell{
     height: 100%;
-    overflow: auto;
 }
 
 .pane{
@@ -93,8 +93,8 @@ h1,h2{
 
     .arrow{
         position: absolute;
-        transition: 0.1s linear all;
-
+        // transition: 0.1s linear all;
+        -webkit-animation: bounce 1s infinite alternate ease-in-out; /* Safari 4+ */
         &:hover{
             cursor: pointer;
         }
@@ -167,4 +167,10 @@ h1,h2{
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+
+@-webkit-keyframes bounce {
+  0%   { bottom: 100px; }
+  100% { bottom: 110px; }
 }

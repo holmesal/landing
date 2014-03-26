@@ -5,7 +5,8 @@ angular.module('landingApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'firebase'
+  'firebase',
+  'duScroll'
 ])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider

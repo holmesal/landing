@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('landingApp')
-  .controller 'MainCtrl', ($scope, $firebase) ->
+  .controller 'MainCtrl', ($scope, $firebase, $timeout, scroller) ->
 
     $scope.changeText = 'Hint: click to permanently change the color of this site'
 
@@ -32,29 +32,6 @@ angular.module('landingApp')
 
         # Update the text
         $scope.changeText = 'Well done.'
-
-    $scope.mouseMove = (e) ->
-        # Unit vectors
-        x = e.clientX / e.view.innerWidth - 0.5
-        y = e.clientY / e.view.innerHeight - (e.view.innerHeight - $scope.btnPos)/e.view.innerHeight
-
-        # if x < 0.1 then x = 0.5 
-        # if x < 0.1 then x = -0.5 
-        # if y > 0.1 then y = 0.5 
-        # if y < 0.1 then y = -0.5 
-
-        scale = 15
-        $scope.offset = 
-            x: x * scale
-            y: y * scale
-
-        # if -10 < $scope.offset.x < 10 and -10 < $scope.offset.y < 10
-        #     $scope.scale = 
-        # console.log "mouse moved to #{x} : #{y}"
-
-    $scope.scrollToNext = ->
-        console.log "scrolling to next!"
-        $("body").animate({scrollTop: "1000"}, "slow");
 
     browserCheck = ->
         check = false;
