@@ -13,7 +13,8 @@
     "angular-route": "1.2.6",
     "angularfire": "~0.7.1",
     "fastclick": "~1.0.0",
-    "angular-scroll": "~0.2.8"
+    "angular-scroll": "~0.2.8",
+    "animate-sass": "~0.3.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

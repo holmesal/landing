@@ -9,6 +9,7 @@ angular.module('landingApp')
 
     # Kinda silly that we can't set this directly as an attribute
     document.getElementById("bgVideo").playbackRate = 0.5;
+    document.getElementById("projectVideo").playbackRate = 0.5;
 
     # Set allowed colors
     allowedColors = ["#4F92E0", "#00CF69", "#F5A623", "#00E8C6"]

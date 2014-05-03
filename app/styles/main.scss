@@ -2,6 +2,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+@import '../bower_components/animate-sass/animate';
+
 %vertical-align {
   position: relative;
   top: 50%;
@@ -72,6 +74,9 @@ h1,h2{
         &.faded{
             opacity: 0.8;
         }
+        &.extraFaded{
+            opacity: 0.95;
+        }
     }
 
     .socialRow{
@@ -132,6 +137,10 @@ h1,h2{
         color: white;
         background-color: rgba(255,255,255,0.1);
     }
+}
+
+.projects{
+    text-align: left;
 }
 
 /* Responsive: Portrait tablets and up */
