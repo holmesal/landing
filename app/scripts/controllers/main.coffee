@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('landingApp')
-  .controller 'MainCtrl', ($scope, $firebase, $timeout, scroller) ->
+  .controller 'MainCtrl', ($scope, $firebase, $timeout, $http, scroller) ->
 
     $scope.changeText = 'Hint: click to permanently change the color of this site'
 
@@ -47,3 +47,6 @@ angular.module('landingApp')
         $scope.isDesktop = false
     else
         $scope.isDesktop = true
+
+    # Send data to the electric imp
+    $http.get 'https://agent.electricimp.com/KIxBoMvUG2Vq/personal'
